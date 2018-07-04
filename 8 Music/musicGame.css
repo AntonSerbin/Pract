@@ -1,0 +1,118 @@
+* {     
+ 	margin: 0;
+ 	padding: 0;
+ 	border: 0;
+ 	vertical-align: baseline;}
+
+.parrent {
+	width: 400px;
+	height: 400px;
+	margin:auto;
+	margin-top: 40px;	
+	border: silver 15px solid;
+	position: relative;
+	border-radius: 50%;
+	font-size: 0;
+}
+
+.btn{width: 170px;
+height: 170px;
+border: silver 15px solid;
+display: inline-block;
+}
+.btn:hover {opacity: 0.8}
+
+.opacity {border: cyan 15px double;
+			opacity: 0.8}
+
+#button2 {
+	border-radius: 100% 0 0 0;
+	background: blue;
+}
+
+#button3 {
+	border-radius: 0 100% 0 0;
+	background: green;
+}
+#button0 {
+	border-radius: 0 0 100% 0 ;
+	background: red;
+}
+#button1 {
+	border-radius: 0 0 0 100%;
+	background: yellow;
+}
+
+.round-center {position: absolute;
+top: 95px;
+right:95px;
+width: 210px;
+height: 210px;
+border-radius: 100%;
+background: silver;
+text-align: center;
+
+}
+
+.round-center p {
+font-size: 40px;
+padding: 30px 0;
+}
+
+#restart {
+position: absolute;
+top:88px;
+left: 20px;
+width: 30px;
+height: 30px;
+border-radius: 100%;
+background: silver;
+border: black 2px solid;
+}
+#restart:hover {opacity: 0.8}
+
+#start {
+position: absolute;
+top:84px;
+left: 70px;
+width: 40px;
+height: 40px;
+border-radius: 100%;
+background: red;
+border: black 2px solid;
+}
+#start:hover {opacity: 0.8}
+
+
+
+#strictMode {
+position: absolute;
+top:90px;
+right: 10px;
+width: auto;
+height: 30px;
+border-radius: 10px;
+background: orange;
+border: black 2px solid;
+padding: 5px;
+}
+#strictMode:hover {opacity: 0.8}
+
+.indicator{
+position: absolute;
+top: 140px; left: 50px;
+width: 100px;
+height: 40px;
+border: black 2px solid;	
+background: brown;
+border-radius: 30px;
+text-align: center;
+}
+
+.indicator h4 {
+line-height: 40px;
+margin: auto;
+padding: 0;
+font-size: 40px;
+color:black;
+}

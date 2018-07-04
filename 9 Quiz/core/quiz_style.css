@@ -1,0 +1,167 @@
+*{margin: 0; padding: 0}
+ 	
+/*div {border: 1px solid red; }*/
+
+body {
+    color: #1d1d21;
+    width: 100%; height: 95vh;
+    background: grey;
+	overflow: hidden; /* Убираем полосу прокрутки */
+    text-shadow: 0 -1px 0 #000;
+    font-family: 'Microsoft Sans Serif','Helvetica','Arial', sans-serif;
+
+}
+#controlTime {
+			top:4.1rem;
+			right: 0;
+			text-align: right;
+		    font-size: 4rem;  /*размер счетчика!!!!!!!!!!!!!*/
+		    color: #eee;
+		    cursor: pointer;
+		    position: absolute;
+		    opacity: 0.45;
+		    z-index: 1;
+}
+
+#controlTime img {width: 2.2rem;}
+
+#slowerButton {transform: rotate(180deg) translateY(-0.3rem);
+}
+
+#lastPossitionButton {transform: rotate(180deg) translateY(-0.3rem);
+}
+
+#quizImage{
+	max-width: 100%;
+	max-height: 90vh;
+	width: 100%;
+	border-radius: 1%;
+    
+	}
+.taskField h2, .taskField p, .taskField h6 {
+	position: absolute;
+	display: block;
+	text-align:center;
+	width:100%;
+}
+
+/*Расположение надписей!*/
+#fieldTaskNumber {top:-7.5rem} 
+#stringTask {top:5rem;}
+#fieldAnswerFormat {bottom: 3rem;
+	  	font-family: 'Roboto', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+		opacity: 0.15;}
+.parrent{ 	position: relative;
+}
+
+
+.taskField{	width: 100%;
+		height: 60vw;
+		cursor: pointer;
+ 		 } 
+
+.taskField h2 {margin:1.5rem 0 0.5rem 0;
+	font-size: 6em;
+}
+
+.taskField p{font-size: 12rem;
+		margin:0 0 0 0;
+		font-weight:900;
+		color: red;
+}
+
+.taskField h6 {margin:0.5rem 0 0.5rem 0;
+	font-size: 4rem;
+	color:blue;
+	
+}
+
+.buttons {
+	width: 100%;
+	position: absolute;	
+	bottom: 2%;
+		}
+.buttons button {font-size: 2rem;
+		background: black;
+		border-radius: 10%;
+		color: white;
+		padding: 0.2rem;
+		cursor: pointer;
+		opacity: 0.2;
+}
+
+#taskButton{
+	color: blue;
+}
+
+#answersButton{
+	position: absolute;
+	right: 0px;
+	color: red;
+}
+
+.colorBlue{color:blue}
+
+.clock {position: absolute;
+		right:0;
+		top:0;
+		opacity: 0.5;}
+
+	/*таймер*/
+		#timeTable {
+		    text-align: right;
+		    font-size: 4rem;  /*размер счетчика!!!!!!!!!!!!!*/
+		    color: #eee;
+		    font-weight: bold;
+		    cursor: pointer;
+		}
+
+		#timeTable .number-wrapper {
+		    margin: 0.2rem;
+		    box-shadow: 0 0.1rem 0.4rem grey;
+		    position: relative;
+		}
+
+		.number {
+		    display: inline-block;
+			background: black;
+		    border-radius: 10%;
+		    background-clip: border-box;
+		    padding: 0 0.2rem;
+			height: 5rem;
+		    line-height: 5rem;
+		    text-align: center;
+		    border: 4px solid #000;
+		    text-shadow: 0 4px 4px grey;
+		}
+		       
+		#timeTable .line {
+		    position: absolute;
+		    width: 100%;
+		    height: 3px;
+		    top: 49%;
+		    left: 0;
+		    background: #000;
+		    box-shadow: 0 2px 0 rgba(255, 255, 255, 0.2);
+		}
+		       
+
+	/*конец таймера*/
+
+
+/*инпут на дополнительную паузу синхронизации*/
+input {
+ padding: 2px;
+ font-size: 2rem;
+ border: 2px solid rgba(255, 255, 255, .5);
+ box-shadow(
+ 0 2px 2px rgba(0, 0, 0, .25) inset,
+ 0 2px 2px rgba(0, 0, 0, .25));
+ @include border-radius(10px);
+ background: rgba(255, 255, 255, .5);
+ @include appearance(none); outline: none; color: #333;
+ width: 10%;
+ position: absolute;
+ left: 10%;
+}
+/* конец инпут на дополнительную паузу синхронизации*/

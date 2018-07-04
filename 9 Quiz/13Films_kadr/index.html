@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>Quiz</title>
+	<link rel="stylesheet" href="../core/bootstrap.css"/>
+	<link rel="stylesheet" href="../core/quiz_style.css" >
+	
+</head>
+<body>
+
+<!-- можно указать аудио файл, играет за 15(можно время изменить в скрипте) секунд до 0  -->
+<audio id="myAudio">
+  <source src="../core/pick.mp3" type="audio/mpeg">
+</audio>
+<div class="container-fluid">
+  <div id="timeTable">Time</div>
+  <div id="controlTime">
+  		<img id="lastPossitionButton" src="../core/change_task.svg" alt="">
+  		<img id="slowerButton" src="../core/forward.svg" alt="">
+  		<img id="pauseButton" src="../core/pause.svg"  alt="">
+  		<img id="fasterButton" src="../core/forward.svg" alt="">
+  		<img id="nextPossitionButton" src="../core/change_task.svg" alt="">
+  	</div>
+
+<div class="parrent" onselectstart="return false">
+
+
+
+	<div class="taskField" id="taskField">
+		<h2 id="fieldTaskNumber">Start</h2>
+		<p id="stringTask">Start</p>
+		<img id="quizImage" src="" alt="">
+		<h6 id="fieldAnswerFormat">Start</h6>
+
+	</div>
+
+
+	
+</div> 
+<div class="buttons">
+	<button id="tasksButton">Tasks</button>
+	<input type="text" id="additionalPause" name="text" placeholder="Доп пауза" />
+	<button id="answersButton">Answers</button>
+</div>
+
+</div>
+</body>
+
+
+<script src="task13.js"></script> 
+
+<script src="../core/quiz_script.js"></script>
+</html>

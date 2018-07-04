@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  	<meta name="keywords" content="HW JS_7">
+	<meta name="description" content="Home work">
+  	<meta name="author" content="Anton Serbin">
+	<title>JS_7</title>
+	<link rel="stylesheet" href="style7.css">
+
+</head>
+<body>
+<!-- task1 start	 -->
+<p><b>Задание 1.</b> Добавьте на страницу элемент input[type=»text»]. Справа от input расположите кнопку «+». При нажатии кнопки «+» добавьте еще один элемент input ниже. Возле появившегося элемента создайте кнопку «-» при нажатии на которую данный input будет удаляться. Внизу формы расположите кнопку «собрать», по нажатию которой текст из элементов input будет выведен в расположенный на странице textarea. 
+Внимание: Количество input на странице не больше . Удалять можно все элементы input кроме последнего.
+</p>
+<p><b>Задание 2.</b> Модифицируйте задание 1, добавив три input[type=»radio»]. В опциях первого укажите «Четные», у второго — «Нечетные», у третьего — «Все». В зависимости от выбранной опции, информация считывается соответственно из четных, нечетных или всех input на странице. По умолчанию выбран последний radiobutton.</p>
+<p><b>Задание 3.</b> Модифицируйте задание 1 добавив проверку на пустые input. Пустой input подсвечивается красным цветом, а рядом выводится надпись «Заполните поле!».</p>
+
+
+<div id="task2Div">
+	<input id="radio1Task2" type="radio" class="radio" name="radioTask2" > Even 
+	<input id="radio2Task2" type="radio" class="radio" name="radioTask2" > Odd   
+	<input id="radio3Task2" type="radio" class="radio" name="radioTask2" checked="checked" > All <br>
+
+
+<div id="task1Div">
+	<div id="divNumber0">
+	<input type="text" class="task1">
+	<button id="plusTask1" class="plus">+</button>
+	</div>
+</div>
+	<button id="resultTask1" >result</button>
+	<p id="resultFieldTask1">Result </p>
+</div>
+	
+<p><b>Задание 4.</b> Реализуйте по нажатию на кнопке всплывающее окно с двумя кнопками. Первая кнопка «Опция ., вторая кнопка «Опция .. По нажатию на кнопку окно закрывается, а на странице выводится надпись «Вы выбрали опцию …» и номер выбранной опции.</p>
+<div >
+	<button id="buttonTask4">OK</button>
+	<p id="resultFieldTask4">Result </p>
+</div>
+
+<p><b>Задание 5.</b> Дан список из элементов. Реализуйте скрипт, который отслеживает клик на элементе списка и подсвечивает его красным цветом. При повторном клике, цвет убирается. Добавьте Input, который позволяет добавлять элементы в список. На них также, распостраняется событие click</p>
+<div >
+	<ul id="ulTask5" class="ulTask5">
+		<li class="liTask5"><p>element 1</p></li>
+		<li class="liTask5"><h3>element 2</h3></li>
+		<li class="liTask5"><div class="element3">element 3</div></li>
+	</ul>
+	<button id="buttonTask5">Input</button>
+
+</div>
+<p><b>Задание 6.</b> Дан блок с изображением. При наведении мыши, на блок, открывается текстовый блок с черным фоном, прозрачность фона .. Направление раскрытия — с правой части родителя. Если мышь убрана — то блок закрывается с задержкой по времени.</p>
+
+<div id="divTask6" class="imgTask6">
+	<div id="divText6" class="displayNone" ><p> <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</b>
+	</p></div>
+</div>
+
+<p><b>Задание 7.</b> Реализуйте скрипт, который при наведении мыши на элементы (изображение или гиперссылка), будет внизу страницы показывать блок, в котором указан адрес изображения, и атрибут alt, если это изображение и адрес ссылки и атрибут title и target, если это гиперссылка. При отсуствии атрибутов — выводится красным предупреждение.</p>
+<p><b>Задание 8.</b> Модифицируйте скрипт из задачи 7 таким образом, чтобы те изображения, которые не имеют атрибут alt, подсвечивались красным цветом.</p>
+
+<div id="divTask7">
+<img src="wwf_logo_6.jpg" alt="">
+<img src="wwf_logo_6.jpg" alt="panda">
+
+<a href="http://www.google.com" target='sample1'>sample1 of the link</a>
+<a href="http://www.google.com" title='sample2' target="sample2">sample2 of the link</a>
+</div>
+<div class="absoluteDivInfoTask7">
+	<p id="resultInfo7">Info:</p>
+</div>
+
+
+<h4><b>Задание 9.</b> Создайте скрипт для проверки наличия на странице элементов h1-h6 выводя при этом их количество. Если какого-либо заголовка нет — вывести предупреждение.</h4>
+
+<div class="divTask9">
+<button id="buttonTask9">Count h1-h6</button>
+<button id="buttonDeleteHTask9">Delete h1-h6</button>
+	<p id="resultFieldTask9">Result:</p>
+
+</div>
+
+<p><b>Задание 10.</b> Модифицируйте скрипт 9 таким образом, чтобы он определял наличие meta title, meta description, meta keywords, рассчитывая длину первых двух. Если они отсутсвуют — выводится предупреждение.</p>
+
+<div id="divTask10">
+	<p id="resultTitleTask10">Meta title: </p>
+	<p id="resultDescriptionTask10">Meta description: </p>
+	<p id="resultKeywordsTask10">Meta keywords: </p>
+</div>
+
+	
+	<script src="script7.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,220 @@
+
+ * {
+ 	padding: 0;
+ 	margin: 0;
+ 	border: 0;
+ 	box-sizing:border-box;
+ 	text-decoration: none;
+ 	}
+
+
+@font-face {
+    font-family: MyriadPro;
+    src: url(../fonts/MyriadPro-Regular.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: OfficinaSansStd;
+    src: url(../fonts/OfficinaSansStd-Book.otf);
+    font-weight: normal;
+    font-style: normal;}
+
+.text1 {
+    font-family: Tahoma;
+    font-size: 12px;
+    color: #FFFFFF;
+    font-weight: normal;}
+
+.text2 {
+    font-family: Tahoma;
+    font-size: 10px;
+    font-weight: normal;
+    color: #FFFFFF;
+}
+.text3 {
+	font-family: tahoma;
+	font-size: 11px;
+	font-weight: bold;
+	color: #333333;
+	padding: 16px 0 20px 0 ;
+
+}
+.text4 {
+	font-family: tahoma;
+	font-size: 14px;
+	font-weight: bold;
+	color: red;
+}
+
+.container {
+	margin: 4px auto;
+	padding: 2px;
+	height: auto;
+	width:780px;
+	border: 1px solid grey;	
+	display: flex;
+	flex-wrap: wrap;
+/*min-width: 700px;*/
+}
+
+
+.header1width {	width: 224px}
+.header2width {
+ 				width: 180px;
+				text-align: right}
+.header3width {
+ 				width: 128px;
+ 				text-align: left; }
+.header3width img {margin-right: 8px;}
+
+header { 
+	height:77px;
+	width:790px;
+	background: url(../images/draw2.jpg) no-repeat ;
+ 	background-position: 244px 0px;
+}
+
+header li, header ul {
+ 	display: inline-flex;
+ 	justify-content:space-between;
+ 	margin: auto;
+ }
+
+nav {
+	width: 220px;
+	padding:18px 0;
+	overflow:hidden;
+	
+}
+
+nav ul {
+    padding-left: 80px;
+    list-style-image: url('../images/button.png');
+    
+    }
+
+nav li, aside li {
+	border-bottom: 1px dotted #dddddd;
+	line-height: 21px;
+	}
+
+nav a {	
+	font-family:MyriadPro;
+	font-size: 14px;
+	color: #1f1f1f; }
+
+a:hover {
+	color: red;
+	}		
+
+aside {
+	font-family:MyriadPro;
+	width: 244px;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	}
+
+aside ul {
+    padding-left: 68px;
+    margin-top: 10px;
+    list-style-image: url('../images/arrow.png');
+    }
+
+ aside a {
+	font-family:Tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	color: #333333;
+}
+
+/*чтоб нижний рисунок расположить справа в Aside*/
+aside img {
+	align-self:flex-end;
+}
+
+/*рисунок-название серый в Aside*/
+.greyAsideName {
+	height: 27px;
+	background: #cbcbcb;
+	color: black;
+ 	text-transform: uppercase;
+ 	font-family: OfficinaSansStd;
+ 	font-size: 14px;
+ 	margin-left: 40px;
+ 	line-height: 27px;
+ 	padding-left: 10px;
+ 	 	}
+
+/*рисунок камеры*/
+.webimage img{
+	width: 515px;
+	height: 184px;
+	position: relative;
+	left:220px;
+	bottom: 30px;
+
+}
+
+/*секция с блоками товаров*/
+section {
+width: 523px;
+height: auto;
+background: #1f1f1f;
+display: inline-flex;
+flex-wrap: wrap;
+align-content: flex-start;
+/*padding:8px;*/
+}
+
+
+/*для блоков с товаром*/
+article {
+width: 242px;
+height: 152px;
+border: 3px double black;
+color: black;
+margin: 5px auto;
+background: white;
+padding: 2px;
+display: inline-flex;
+flex-wrap: wrap;
+align-content: flex-start;
+justify-content:space-around;
+}
+
+/*для последних двух картинок*/
+.imageNoPadding {   
+padding: 0;
+}
+
+footer {
+	background: url(../images/cards.jpg) no-repeat ;
+	width: 100%;
+	height: 66px;
+	padding-left: 300px;
+	font-size: 10px;
+	color: black;
+	font-family: tahoma;
+	overflow: hidden;
+}
+footer ul{
+	margin: 20px auto 0;
+ 	display: inline-flex;
+ 	justify-content: space-between;
+ 	line-height: 16px;
+ }
+
+footer a, footer li{
+	color: black;
+	list-style-type: none; /* Убираем маркеры у списка */
+	margin-right: 5px; 
+	font-size: 1em;
+   }
+
+footer li:before {
+    content: "|  "; /* Добавляем в качестве маркера символ */
+   }
+

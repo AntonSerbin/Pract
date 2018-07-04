@@ -1,0 +1,78 @@
+*{font-family:Open Sans, sans-serif;
+user-select: none;
+}
+body {background: LightGray;}
+
+
+.parrent {
+margin: 20px auto;
+width: 400px;
+height: 510px;
+border-radius: 25px;
+background: silver;
+}
+
+#restart {
+background: silver;
+/*box-shadow: 2px 2px #888888;*/
+border-radius: 10px;
+margin-left: 131px;	
+line-height: 5px;
+height: 40px;
+width: 150px;
+cursor: pointer;
+}
+
+.stringButtons {
+margin-top: 20px;
+width: 400px;
+height: 100px;
+display:flex;
+justify-content:space-around;
+/*border: green 1px solid;*/
+}
+
+.restTimerPannel, .workTimerPannel{
+width: 150px;
+/*border: yellow 1px solid;*/
+}
+
+.restTimerPannel h4, .workTimerPannel h4{
+text-align: center;
+line-height: 20px;
+font-size: 20px;
+margin: 0 0 20px 0;
+}
+
+.restTimerPannel button, .workTimerPannel button {
+display: inline;
+width: 40px;height: 40px;
+border-radius: 50%;
+margin: 0 8px;
+cursor: pointer;
+}
+
+.restTimerPannel p, .workTimerPannel p {
+font-size: 20px;
+display: inline;}
+
+.timerTable{
+margin: -10px auto 0;
+width: 350px;
+height: 350px;
+border-radius: 50%;
+border: grey 1px solid;
+font-size: 80px;
+line-height: 350px;
+cursor: pointer;
+background: white;
+
+}
+#minutesTable {
+display: inline;
+margin-left: 55px; 
+
+}
+.timerTable p{
+display: inline;
+}

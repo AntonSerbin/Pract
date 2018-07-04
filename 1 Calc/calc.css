@@ -1,0 +1,40 @@
+.parrent {
+margin: auto;
+width: 300px;
+height: 390px;
+border-radius: 25px;
+border: red 2px solid;
+background-color: silver;}
+
+.stringCalc {
+	width: 80%;
+	height: 50px;
+	background: grey;
+	border: black 2px solid;	
+	margin: auto;
+	margin-top: 40px;
+	border-radius: 5px;
+	text-align: right;
+	padding-right: 5px;
+	font-size: 26px;
+	line-height: 0px;
+	font-family:Verdana, Geneva, sans-serif;
+}
+
+.buttonsCalc {width: 280px;
+margin: auto;
+margin-top: 15px;
+/*border: blue 2px solid;*/
+
+
+}
+
+.squareButton {
+border-radius: 5px;
+width: 45px;
+height: 45px;
+margin: 10px;
+font-size: 20px;
+font-family:Verdana, Geneva, sans-serif;
+
+}

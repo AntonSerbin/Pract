@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pomidor</title>
+	<link rel="stylesheet" href="pomidor.css">
+</head>
+<body>
+   <audio id="myAudio">
+     <source src="http://www.pacdv.com/sounds/interface_sound_effects/sound118.wav">
+   </audio>
+
+	<div class="parrent">
+       <button id="restart"><h4>TIMER RESTART</h4></button>
+
+       <div class="stringButtons">
+         
+         <div class="restTimerPannel">
+            <h4>Break length <br></h4>
+            <button id="addRestMinTimer">+</button>
+            <p id="timerRestValue">1</p>
+            <button id="minusRestMinTimer">-</button>
+         </div>
+         <div class="workTimerPannel">
+            <h4>Session length <br></h4>
+            <button id="addWorkMinTimer">+</button>
+            <p id="timerWorkValue">2</p>
+            <button id="minusWorkMinTimer">-</button>
+         </div>
+      </div>  <!-- //end stringButtons -->
+
+      <div id="timerTable" class="timerTable">
+         <p id="minutesTable">00</p>
+         <p> : </p>
+         <p id="secondsTable">00</p>
+      </div>
+
+	<script src="pomidor.js"></script>
+</body>
+</html>
