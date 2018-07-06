@@ -69,7 +69,7 @@ function func_button(el){
 		if (action=="-") string = (number1-number2).toString();			
 		if (action=="*") string = (number1*number2).toString();			
 		if ((action=="/")&&(number2!=0)) string = (number1/number2).toString();
-		if ((action=="/")&&(number2==0)) string = "devide 0";
+		if ((action=="/")&&(number2==0)) string = "ERROR";
 		afterEqual = true;			
 	};
 
