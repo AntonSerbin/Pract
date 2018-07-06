@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS_9_Cinema</title>
+	<link rel="stylesheet" href="style9.css" id="lightTheme">
+
+</head>
+<body>
+
+<div class="swithcerTheme">
+	<div class="onoffswitch">
+    	<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+    	<label class="onoffswitch-label" for="myonoffswitch">
+       	 <span class="onoffswitch-inner"></span>
+       	 <span class="onoffswitch-switch"></span>
+    	</label>
+	</div>	
+</div>
+
+<div class="parrent">
+
+<form class="inputSearch" id="inputSearch">
+		<input type="text" id="inputStr" placeholder="search string...">
+		<button type="submit">Search</button>
+</form>
+
+
+
+	<button id="popularButton" class="buttonChoose" type="submit">popular</button>
+	<button id="latestButton" class="buttonChoose type="submit">latest</button>
+	<button id="topRatedButton" class="buttonChoose type="top_rated">Top rated</button>
+
+
+
+
+	<article class="listFilms" id="result">
+ 	</article>
+
+</div>  
+
+<script type="text/lo_dash" id="pattern">
+	<div class="oneFilm"> 
+		<img class="imagePoster" src="<%- img%>" alt="">
+		<div class="filmRating"> <p><%- rating%></p> 
+		</div>
+		<div class="filmInfo"> 
+			<div class="filmTitle"> <h2> <%- title%></h2>
+			</div>
+			<p class="filmReleaseDate"> <%- date%> </p>
+			<p class="filmOverview"> <%- overwiev%> </p>
+		</div>
+	</div>
+</script>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
+	<script src="script9.js"></script>
+</body>
+</html>

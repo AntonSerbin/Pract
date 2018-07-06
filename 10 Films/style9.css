@@ -1,0 +1,118 @@
+*{margin: 0; padding: 0;
+}
+.parrent{background: url(https://i.ytimg.com/vi/8l4a6H1wC7M/maxresdefault.jpg);	
+background-size: 100%;
+}
+
+.oneFilm {width: 210px;
+	height: 310px;
+	margin: 10px;
+	position: relative;
+	border: solid 1px black;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 9px 9px 9px 0px rgba(0,0,0,0.75);
+     }
+
+.imagePoster {width: 210px;height: 310px;}
+ 
+.listFilms {
+	display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+	width: 80%;
+	margin-left: 250px;
+
+	align-items:flex-end;
+
+}
+
+.filmRating{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	font-size: 20px;
+	width: 35px; height: 25px; 
+	background: orange;
+	border-radius: 25%;
+	}
+
+
+.filmInfo {
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	width: 100%;
+	height: 50%;
+	background: white;	
+		padding: 2px;
+
+}
+
+.filmTitle {
+		font-family: Roboto,sans-serif;
+    	font-weight: bold;
+        padding: 2px;
+        margin-bottom: 8px;}
+
+.filmOverview {text-overflow: clip}
+
+.inputSearch input, .inputSearch button {font-size: 20px;}
+
+.buttonChoose {
+		cursor: pointer;
+	    font-size: 12px;
+		padding: 10px 8px;
+    	text-transform: uppercase;
+}
+/*кнопка переключатель темы начало*/
+	.swithcerTheme {
+		position: absolute;
+		right: 0px;
+	}
+	.onoffswitch {
+	    position: relative; width: 99px;
+	    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+	}
+	.onoffswitch-checkbox {
+	    display: none;
+	}
+	.onoffswitch-label {
+	    display: block; overflow: hidden; cursor: pointer;
+	    border: 2px solid #848F86; border-radius: 22px;
+	}
+	.onoffswitch-inner {
+	    display: block; width: 200%; margin-left: -100%;
+	    transition: margin 0.3s ease-in 0s;
+	}
+	.onoffswitch-inner:before, .onoffswitch-inner:after {
+	    display: block; float: left; width: 50%; height: 36px; padding: 0; line-height: 36px;
+	    font-size: 16px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+	    box-sizing: border-box;
+	}
+	.onoffswitch-inner:before {
+	    content: "ON";
+	    padding-left: 10px;
+	    background-color: #F0E5B7; color: #136AED;
+	}
+	.onoffswitch-inner:after {
+	    content: "OFF";
+	    padding-right: 10px;
+	    background-color: #0946ED; color: #999999;
+	    text-align: right;
+	}
+	.onoffswitch-switch {
+	    display: block; width: 23px; margin: 6.5px;
+	    background: #FFFFFF;
+	    position: absolute; top: 0; bottom: 0;
+	    right: 59px;
+	    border: 2px solid #848F86; border-radius: 22px;
+	    transition: all 0.3s ease-in 0s; 
+	}
+	.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+	    margin-left: 0;
+	}
+	.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+	    right: 0px; 
+	}
+/*кнопка переключатель темы конец*/
