@@ -68,7 +68,8 @@ function func_button(el){
 		if (action=="+") string = (number1+number2).toString();
 		if (action=="-") string = (number1-number2).toString();			
 		if (action=="*") string = (number1*number2).toString();			
-		if (action=="/") string = (number1/number2).toString();
+		if ((action=="/")&&(number2!=0)) string = (number1/number2).toString();
+		if ((action=="/")&&(number2==0)) string = "devide 0";
 		afterEqual = true;			
 	};
 
@@ -78,9 +79,11 @@ function func_button(el){
 	}
 
 	if (string.length<=12) stringCalc.innerHTML = string
-		else  stringCalc.innerHTML = +string.slice(0, 12);
+		else stringCalc.innerHTML = parseFloat(string).toFixed(12);
 	if (Number(string)>999999999999) stringCalc.innerHTML = "Too big number";
-	if (Number(string)<0.0000001) {string="";stringCalc.innerHTML ="0"; };
+	if (Number(string)<0.0000001) {string="";stringCalc.innerHTML ="0";number1=0; 
+};
+
 
 
 	if (el=="+") {
