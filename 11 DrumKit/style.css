@@ -1,0 +1,46 @@
+* {margin: 0;padding: 0;}
+
+body {    
+	background: grey;    
+}
+
+img {
+	display: block;
+	margin: 0 auto;
+	width: 800px;
+}
+
+.descriptionInstrument{
+font-size: 10px;
+color: blue;
+margin: -5px 0;
+text-transform: uppercase;
+
+}
+.parrent{
+	display:inline-flex;
+	justify-content: space-around;
+	width: 60%;
+	margin-left: 20%;
+	user-select: none;
+	/*border:red 1px solid;*/
+	 
+}
+.buttonKey {
+	width: 50px;
+	height: 50px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5); 
+	line-height: 30px;
+	border: black 3px solid;
+	background: silver;
+	border-radius: 20%;
+	text-align: center;
+	font-size: 30px;	
+	margin: 20px 15px 0 0;
+}
+
+.action {
+	transform: scale(1.5);
+	border: orange 3px solid;
+	transition: all 0.5s;
+}
