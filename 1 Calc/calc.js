@@ -76,7 +76,7 @@ function func_button(el){
 
 	if (string.length<=12) stringCalc.innerHTML = string
 		else stringCalc.innerHTML = parseFloat(string).toFixed(12);
-	if ((Number(string)>999999999999)&&(Number(string)>-999999999999)) {
+	if ((Number(string)>999999999999)||(Number(string)<-99999999999)) {
 		stringCalc.innerHTML = "Too big number"; number1=0; number2=0; action=""; string=""; afterEqual = true;
 	}
 	if ((Number(string)<0.00000001)&&(Number(string)>-0.00000001)&&(Number(string)!=0)) {
