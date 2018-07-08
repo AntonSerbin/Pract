@@ -74,17 +74,18 @@ function func_button(el){
 		afterEqual = true;			
 	};
 
-
-	if (el=="C") {
-		number1=0; number2=0; action=""; string=""; afterEqual = true;
-	}
-
 	if (string.length<=12) stringCalc.innerHTML = string
 		else stringCalc.innerHTML = parseFloat(string).toFixed(12);
-	if (Number(string)>999999999999) stringCalc.innerHTML = "Too big number";
-	if (Number(string)<0.0000001) {string="";stringCalc.innerHTML ="0";number1=0; 
-};
+	if ((Number(string)>999999999999)&&(Number(string)>-999999999999)) {
+		stringCalc.innerHTML = "Too big number"; number1=0; number2=0; action=""; string=""; afterEqual = true;
+	}
+	if ((Number(string)<0.00000001)&&(Number(string)>-0.00000001)&&(Number(string)!=0)) {
+		stringCalc.innerHTML ="0"; number1=0; number2=0; action=""; string=""; afterEqual = true;
+	};
 
+	if (el=="C") {
+		number1=0; number2=0; action=""; string=""; afterEqual = true; stringCalc.innerHTML ="";
+	}
 
 
 	if (el=="+") {
