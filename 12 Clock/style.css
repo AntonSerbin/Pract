@@ -1,0 +1,91 @@
+* {margin: 0;padding: 0;
+  box-sizing: border-box;
+}
+html{
+	font-family: 'helvetica neue', sans-serif;
+	font-weight: 100;
+	font-size: 15px;
+    text-align: center;
+}
+
+:root{
+	--colorClock: #f22222;
+	--scaleClock: 0.55;
+}
+
+.content{
+ 	/*padding-bottom: 90px;*/
+	min-height: calc(100vh - 80px);
+	border: solid 1px green;
+	background: url(111.jpg);
+	position: relative;
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
+}
+
+.round{
+	width: 300px;
+	height: 300px;
+	border: gold 20px solid;
+	border-radius: 50%;
+	position: absolute;
+	background: var(--colorClock);
+	transform: scale(var(--scaleClock));
+	display: block;
+}
+
+.secLine, .minLine, .hourLine {
+	width: 45%;
+	height: 5px;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	background: black;
+  	transform: rotate(-90deg);
+    transform-origin: 0 0;
+}
+
+.minLine {
+	width: 40%;
+	height: 6px;
+}
+
+.hourLine {
+	width: 30%;
+	height: 7px;
+	background: dimgray;
+}
+
+.transition {
+	transition: all 0.5s;
+	transition-timing-function: cubic-bezier(0.6, 2.67, 0.7, 1.33);
+}
+
+.footer {
+	background: silver;
+	position: absolute;
+	width: 100%;
+	height: 80px;
+	border: solid 1px red;
+
+}
+
+input{
+	border: solid 2px yellow;
+	width: 200px;
+    height: 50px;
+    opacity: 0.7;
+    transition: opacity .2s;
+
+}
+
+#rangeInput {margin-top:12px;
+    border-radius: 50%;   
+}
+
+label {font-size: 3em;
+	font-weight:900;
+    margin: 0 10px 0 80px;
+}
+
