@@ -1,3 +1,5 @@
+body {background: silver}
+
 .main {
 	display: flex;
 	flex-wrap: wrap;
@@ -12,4 +14,10 @@ img {
 	margin: 20px;
 	  border: 1px black solid;
 	  border-radius: 10%;
+}
+
+img:hover{
+	transform: scale(1.25);
+	transition-duration: 0.8s;
+
 }

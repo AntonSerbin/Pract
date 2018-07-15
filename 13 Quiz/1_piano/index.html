@@ -6,9 +6,19 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<video width=40% controls="controls" poster="piano.jpg" autodplay="autoplay">
-	<source src="video_piano_20sec.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-	</video>
+
+<div class="header"> 
+	<div class="headerVideo">
+		<video flex="8"controls="controls" poster="piano.jpg">
+		<source src="video_piano_20sec.mp4" type='video/mp4'>
+		</video>
+	</div>
+	<div class="resultArea">
+		<button id="resultButton">Проверить</button>
+		<h4 id="resultIndicator">Три попытки</h4>
+		<h4 id="attempts"></h4>
+	</div>
+</div>
 
 <ul>
 	<li><label for="Answer1">Ответ1:</label>
@@ -46,9 +56,7 @@
 		<input type="text"; name="Answer10" placeholder="Название песни или группы на рус языке" title="Формат ответа: Название песни или группы(исполнителя) на русском языке" value="">
 	</li>
 </ul>
-	<button id="resultButton">Проверить</button>
-	<h4 id="resultIndicator">Три попытки</h4>
-	<h4 id="attempts"></h4>
+
 <script src="script.js"></script>
 
 </body>
