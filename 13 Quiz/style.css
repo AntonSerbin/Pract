@@ -51,7 +51,6 @@ html{
 }
 
 video {
-/*	display: flex;*/
 	margin: auto;
 }
 
@@ -80,7 +79,10 @@ h4{text-align: center;}
 	flex-direction: column;
 	}
 	input {
-		width: 120px;
+		width: 100px;
 		margin-right: 10px;
 		}
+	li{width: 80%;}
+	.headerVideo{width: 100%;}
+
 }
