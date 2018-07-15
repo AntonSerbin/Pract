@@ -79,3 +79,11 @@ li {padding: 1rem;
 	border: solid 1px black}
 
 h4{text-align: center;}
+
+
+@media screen and (max-width: 600px) {
+   .header {
+	flex-direction: column;
+	}
+	input {width: 120px;}
+}
