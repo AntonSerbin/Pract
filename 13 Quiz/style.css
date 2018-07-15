@@ -6,21 +6,18 @@
 	display: flex;
 	justify-content: center;
 }
-
-.headerVideo, .resultArea{
-	display: flex;
+.headerVideo {
+		display: flex;
+		flex:8;
 }
-
-.headerVideo {flex:8;}
 .resultArea {
+	display: flex;
 	flex:3;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-
 	margin-right: 0.1rem;
-
-	}
+}
 
 button{width: 10rem;
 	height: 3em;
@@ -29,7 +26,6 @@ button{width: 10rem;
 	display: block;
 	border-radius: 2%;
 	/*margin-bottom: 0.3rem;*/
-
 }
 
 input {padding: 0.3rem;
@@ -53,6 +49,7 @@ html{
 	font-size: 1.5rem;
 	background: silver;
 }
+
 video {
 /*	display: flex;*/
 	margin: auto;
@@ -63,15 +60,12 @@ ul {padding: 0 10% 0 10% ;
 	justify-content:space-around;
 	flex-wrap: wrap;
 	list-style-type: none;
-	}
+}
 
 li {padding: 1rem;
 	line-height: 1.5em;
     width: 29%;
-
 }
-
-
 
 .correctInput{
 	background: mediumseagreen;
@@ -85,5 +79,8 @@ h4{text-align: center;}
    .header {
 	flex-direction: column;
 	}
-	input {width: 120px;}
+	input {
+		width: 120px;
+		margin-right: 10px;
+		}
 }
