@@ -35,7 +35,7 @@ function checkResults(){
 	console.log(resultIndicator);
 	if (counterAttempts<=2) {
 		counterAttempts++;
-		resultIndicator.innerHTML=`Правильных ответов: ${res} из 10` 
+		resultIndicator.innerHTML="Правильных ответов: ", res," из 10"; 
 		attempts.innerHTML= `Попытка: ${counterAttempts} из 3 `;
 	}
 	if (res==10) resultIndicator.innerHTML=`ВСЕ ОТВЕТЫ ВЕРНЫЕ!!!`;
