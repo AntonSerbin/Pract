@@ -73,6 +73,7 @@ function CountdownTimer(arr){
 				   					else timeTable.innerHTML = "pause"; 
 				  		}
 					else {
+						if (arr[counterOfTasks].pict=="") arr[counterOfTasks].pict=tasks[counterOfTasks].pict;
 						if(!arr[counterOfTasks]) {
 							taskField.style = 'display:none';
 							counterOfTasks=false;
@@ -84,9 +85,9 @@ function CountdownTimer(arr){
 						if (arr[counterOfTasks].sizeFormatAnswer) fieldAnswerFormat.style.fontSize=arr[counterOfTasks].sizeFormatAnswer;
 						fieldAnswerFormat.innerHTML = arr[counterOfTasks].formatAnswer;
 						sec=arr[counterOfTasks].sec; 
-						console.log(arr[counterOfTasks], arr[counterOfTasks].pict);
+						// console.log(arr[counterOfTasks], arr[counterOfTasks].pict);
 						counterOfTasks++;
-						console.log("Seconds",sec,"stepOfTimer",stepOfTimer/1000,"counterofTasks",counterOfTasks);
+						// console.log("Seconds",sec,"stepOfTimer",stepOfTimer/1000,"counterofTasks",counterOfTasks);
 						plusSecond();
 		   			};
 	   		// звук гонга , в блоке условаия: текущее время в которое включится звук  и текущая скорость таймера
