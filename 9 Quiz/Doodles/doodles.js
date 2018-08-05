@@ -99,7 +99,7 @@ const tasks = [
 const answers = [
   	task1 = {
 			sec:12, formatAnswer:"",
-			task:"Рошар",
+			task:"Роршах",
 			pict:""},
 	task2 = {
 			sec:12, formatAnswer:"",
@@ -107,7 +107,7 @@ const answers = [
  			pict:""},
 	task3 = {
 			sec:12, formatAnswer:"",
-			task:`Братья Грим`,
+			task:`Ш.Перро, Грим`,
 			pict:""},
 	task4 = {
 			sec:12, formatAnswer:"",
