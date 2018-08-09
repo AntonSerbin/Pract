@@ -55,7 +55,7 @@ function CountdownTimer(arr){
 	  	let stepOfTimer = 1000; 
 	  	let sec=0;
 	  	counterOfTasks = 0;
-		console.log("Pause",pauseCounter,"counterOfTasks",counterOfTasks );
+		// console.log("Pause",pauseCounter,"counterOfTasks",counterOfTasks );
 		taskField.style = 'display:block';
 
 
