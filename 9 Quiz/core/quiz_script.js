@@ -62,6 +62,7 @@ function CountdownTimer(arr){
 		//добавляем секунду
 		  	function plusSecond(){
 		  			let time=0; 
+					if (counterOfTasks>100) stepOfTimer=1;
 					if (sec>0){
 					  	// gong.play();
 			  			console.log("Seconds",sec,"stepOfTimer",stepOfTimer/1000,"counterofTasks",counterOfTasks);
@@ -91,7 +92,7 @@ function CountdownTimer(arr){
 						plusSecond();
 		   			};
 	   		// звук гонга , в блоке условаия: текущее время в которое включится звук  и текущая скорость таймера
-	   		if ((sec==16)&&(stepOfTimer>=500)) gong.play(); //запускаем гонг если шаг 1секунда или более
+	   		//if ((sec==16)&&(stepOfTimer>=500)) gong.play(); //запускаем гонг если шаг 1секунда или более
 			};
 			//функция добавляет 0 в циферблат при однозначном числе
 			function addZero (num){ return ('0'+num).slice(-2)};
@@ -136,12 +137,16 @@ tasksButton.addEventListener("click",()=>{
 
 	if (!counterOfTasks) {
 		console.log("start1, ",additionalPause.value);
+
 		setTimeout(()=>pauseBeforeStart(),0);
 	}
 	else alert("Закончите задания");
 });
 //запуск функции ответы, первый аргумент = массив заданий, второй размер шрифта
 answersButton.addEventListener("click",()=> {
-	if (confirm("Ответы уверен?")&&(!counterOfTasks)) CountdownTimer(answers)
+	if (confirm("Ответы уверен?")) {
+		counterOfTasks=1000;
+		setTimeout(()=>CountdownTimer(answers),1200);
+	}
 });
 

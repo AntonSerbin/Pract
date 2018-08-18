@@ -33,13 +33,27 @@ body {
 #lastPossitionButton {transform: rotate(180deg) translateY(-0.3rem);
 }
 
+@media screen and (min-width: 800px) and (max-width: 1290px) {
 #quizImage{
-	max-width: 100%;
-	max-height: 90vh;
 	width: 100%;
+    max-width:100%;
+  	max-height:100%;
 	border-radius: 1%;
-    
+
 	}
+}
+
+@media screen and (min-width: 1290px) and (max-width: 1800px) {
+#quizImage{
+
+	width: 80%;
+    max-width:80%;
+  	height:auto;
+  	margin-left: 10%;
+	border-radius: 1%;
+	}
+}
+
 .taskField h2, .taskField p, .taskField h6 {
 	position: absolute;
 	display: block;
