@@ -19,7 +19,7 @@ body {
 	border: solid 2px black;
 	display: grid;	
 	grid-template-columns: minmax(100px, 40%) 1fr;
-	grid-gap: 10px;
+	grid-gap: 15px;
 }
 
 .description {
@@ -84,6 +84,8 @@ body {
 .submitbutton{
 	grid-area: submitbutton;
 	margin: auto;
+	padding: 20px;
+
 }
 
 .submitbutton>button {
@@ -92,6 +94,7 @@ body {
 	border-radius: 4px;
 	width: auto; height: 30px;
 	color: var(--main-color);
+	padding: 2px;
 }
 
 @media screen and (max-width: 700px)  {
@@ -128,9 +131,7 @@ body {
 		padding: 1px;
 	}
 	.submitbutton>button {color:var(--add-color)}
-	.submitbutton{padding-bottom:80px;}
 
-		
 	*{color:var(--add-color);}
 }
 
