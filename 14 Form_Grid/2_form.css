@@ -1,0 +1,136 @@
+*{margin: 0;padding: 0; font-family: 'Lato', sans-serif
+}
+:root{--main-color: blue;
+--add-color:DarkBlue;}
+
+body {
+	background: cyan;
+	color: var(--main-color);
+}
+
+#title {text-align: center}
+
+.parrent {
+	background: LightGrey;
+	height: auto;
+	width: 50%;
+	margin: auto;
+	border-radius: 8px;
+	border: solid 2px black;
+	display: grid;	
+	grid-template-columns: minmax(100px, 40%) 1fr;
+	grid-gap: 10px;
+}
+
+.description {
+	grid-area: description;	
+	text-align: center;
+	padding: 1em;}
+
+.name-label, .email-label, .number-label, .dropdown-label, .checkbox-label, .textarea-label {
+	text-align: right;
+	padding-right: 5px;
+}
+.name-label {
+	grid-area: name-label;
+	}
+.email-label {
+	grid-area: email-label;
+	}
+.number-label {
+	grid-area: number-label;
+	}
+.dropdown-label {
+	grid-area: dropdown-label;
+}
+.checkbox-label{
+	grid-area: checkbox-label;
+}
+.textarea-label {
+	grid-area: textarea-label;
+}
+
+.parrent>div>input {
+	width: 50%;
+	color:blue;
+	font-size: 1em;}
+
+.name{grid-area: name; border: dotted 1px cyan}
+.emailA{grid-area: emailA;}
+.number{grid-area: number;}
+.dropdown{grid-area: dropdown;}
+.checkbox {
+	grid-area: checkbox;
+	width: 200px;	
+}
+.textarea {grid-area: textarea;}
+.textarea>textarea {	width: 60%;
+	height: 60px;
+	resize: vertical;}
+.parrent {
+		grid-auto-rows: minmax(30px,auto);
+		grid-template-areas: 
+			"description description"
+			"name-label name"
+			"email-label emailA"
+			"number-label number"
+			"dropdown-label dropdown"
+			"checkbox-label checkbox"
+			"textarea-label textarea"
+			"submitbutton submitbutton";
+		}
+
+
+.submitbutton{
+	grid-area: submitbutton;
+	margin: auto;
+}
+
+.submitbutton>button {
+	font-size: 19px;
+	background-color: LightGrey;
+	border-radius: 4px;
+	width: auto; height: 30px;
+	color: var(--main-color);
+}
+
+@media screen and (max-width: 700px)  {
+.parrent {
+		height: auto;
+		grid-template-columns: minmax(100px, 1fr);
+		grid-gap: 2px;
+		grid-template-areas: 
+			"description"
+			"name-label"
+			"name"
+			"email-label"
+			"emailA"
+			"number-label"
+			"number"
+			"dropdown-label"
+			"dropdown"
+			"checkbox-label"
+			"checkbox"
+			"textarea-label"
+			"textarea"
+			"submitbutton"	
+	;	
+	}	
+	.checkbox {width: 100%;}
+	.parrent>div>input {
+	width: 90%;
+	color:blue;
+	font-size: 1em;
+	padding: 2px;
+	}
+	.parrent>div {
+		text-align: center;
+		padding: 1px;
+	}
+	.submitbutton>button {color:var(--add-color)}
+	.submitbutton{padding-bottom:80px;}
+
+		
+	*{color:var(--add-color);}
+}
+
