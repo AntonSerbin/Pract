@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> b76466c23e92b2fbdf5613e4232cd9740743c475
 const inputs = document.querySelectorAll("input");
 const resultButton = document.querySelector("#resultButton");
 const resultIndicator = document.querySelector("#resultIndicator");
