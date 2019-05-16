@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BuferString</title>
+</head>
+<body>
+<script>
+function makeArmy() {
+
+  var shooters = [];
+
+  for (var i = 0; i < 10; i++) {
+
+	    var shooter = function xxx(i) { // функция-стрелок
+	         console.log(xxx.i); // выводит свой номер
+		};
+		shooter.i=i;
+		shooters.push(shooter);
+
+  };
+
+  return shooters;
+}
+
+var army = makeArmy();
+
+army[4](); // стрелок выводит 10, а должен 0
+</script>
+
+
+</body>
+</html>

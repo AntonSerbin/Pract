@@ -1,0 +1,58 @@
+.parrent {margin:auto;
+display: block;
+width: 90%;
+height: 95vh;
+background: LightGrey;}
+input {margin-left: 20px;
+width: 40px;}
+
+#slide1:checked ~ .backGrnd{background: url(https://bipbap.ru/wp-content/uploads/2017/08/1395393465_847424_20-2.jpg) center/cover no-repeat ;}
+#slide2:checked ~ .backGrnd{background: url(https://images.mentalfloss.com/sites/default/files/styles/mf_image_16x9/public/166116518.jpg?itok=UrRP3qqz&resize=1100x1100) center/cover no-repeat ;}
+#slide3:checked ~ .backGrnd{background: url(https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzA5OS8xMzgvb3JpZ2luYWwvc2FoYXJhLWRlc2VydC1leHBhbmRpbmcuanBn) center/cover no-repeat;}
+#slide4:checked ~ .backGrnd{background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Monasterio_Khor_Virap%2C_Armenia%2C_2016-10-01%2C_DD_25.jpg/1200px-Monasterio_Khor_Virap%2C_Armenia%2C_2016-10-01%2C_DD_25.jpg) center/cover no-repeat;}
+#slide5:checked ~ .backGrnd{background: url(http://daler.ru/pictures/1/1920x1200/Holmyi-11096.jpg) center/cover no-repeat;}
+
+.backGrnd{
+width: 100%;
+height: 100%;
+}
+.sliderButtons {
+	position: absolute;
+	width: 300px;
+	height: 20px;
+	bottom: 30px;
+	left: 45%;
+}
+
+.sliderButtons> label{
+  /*border-radius: 212px;*/
+  bottom: 34px;
+  margin-right: 8px;
+  z-index: 1;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background-color: #000;
+  cursor: auto;
+}
+
+.sliderButtons>label:hover{
+	background: LightGreen;
+box-shadow: 0 0 8px 2px LightGreen;
+
+}
+
+#slide1:checked ~ .backGrnd >.sliderButtons >label:nth-of-type(1) {
+	background-color: green;} 
+#slide2:checked ~ .backGrnd >.sliderButtons >label:nth-of-type(2) {
+	background-color: green} 
+#slide3:checked ~ .backGrnd >.sliderButtons >label:nth-of-type(3) {
+	background-color: green} 
+#slide4:checked ~ .backGrnd >.sliderButtons >label:nth-of-type(4) {
+	background-color: green} 
+#slide5:checked ~ .backGrnd >.sliderButtons >label:nth-of-type(5) {
+	background-color: green} 
+
+input {display: none}

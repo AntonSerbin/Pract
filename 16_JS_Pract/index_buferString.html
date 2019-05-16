@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BuferString</title>
+</head>
+<body>
+<script>
+
+
+function filter(array, funcIf){
+	let newArr=[];
+	array.map(function(number){
+		// console.log(number);
+		if (funcIf(number)== true) {newArr.push(number);
+			};
+	})
+	return newArr;
+};
+
+
+function inBetween(a,b){
+	return function(number){
+		if ((number>=a) && (number<=b)) return true;
+			}
+};
+
+
+function inArray(checkArray){
+
+	return function(number){
+		let check = false;
+		checkArray.map((num)=>	{if (num==number) check=true});
+		if (check) return true;
+	};
+};
+
+var arr = [1, 2, 3, 4, 5, 6, 7];
+
+console.table( filter(arr, inBetween(3, 6)) ); // 3,4,5,6
+
+console.table( filter(arr, inArray([1, 2, 4, 7])) ); // 1,2
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+* {margin: 0;padding: 0;
+  box-sizing: border-box;
+}
+html{
+		font-family: 'helvetica neue', sans-serif;
+	    text-align: center;
+	    font-size: 3em;
+}
+
+header{
+	text-align: center;
+}
+
+#nameTeam {text-align: center;
+color:red;}
+
+footer button {width: 33%;
+	margin-left: 0;
+	line-height: 1.5em;
+	font-size: 1.5em;
+}
+
+footer input {	
+	font-size: 1.2em;
+	width: 50%;
+	border:black 0.5px solid;}
+
+
+
+@media only screen  and (min-width: 1224px) {
+	html{
+		font-size: 16px;
+	}
+	footer button {width: 10%;
+	margin-left: 2%;
+	line-height: 200%;
+	}
+	footer input {	
+	font-size: 1.5em;
+	height: 1.5em;
+	width: 30%;
+	border:black 0.3px solid;
+	}
+}

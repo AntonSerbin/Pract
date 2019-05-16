@@ -1,0 +1,22 @@
+*{box-sizing: border-box;}
+:root {
+	--imageSize:174px;
+	--borderSize:12px;
+	--angleFrame:-12deg;
+}
+.image {
+	position: absolute;
+	left: 20px;
+	top:20px;
+	border: var(--borderSize) double LightGrey;
+	height: var(--imageSize);
+	width: var(--imageSize);
+}
+.eraseArea {
+	background: white;
+	border: none;
+}
+.borderAngle {
+	transform: rotate(var(--angleFrame));
+}
+

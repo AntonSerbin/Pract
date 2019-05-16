@@ -1,0 +1,35 @@
+*{margin: 0;padding:0}
+
+.battery {
+	margin: 30px;
+	width: 500px;
+	height: 40px;
+	background: linear-gradient(to top, RGBA(51, 51, 51, 1), RGBA(151, 151, 151, 1));
+	border-radius: 20px;
+	border: 2px solid grey;
+
+}
+
+.battery::after {
+	display: block;
+	width: 0;
+	height: 36px;
+	background: linear-gradient(to top, RGBA(85, 189, 253, 1), RGBA(6, 145, 243, 1), RGBA(83, 188, 253, 1));
+	content: "";
+	border: 2px solid grey;
+	border-radius: 18px 0 0 18px;
+	overflow: hidden;
+	transition: width 2s;
+	border-color: transparent;
+
+}
+
+
+.battery:hover::after {
+width: 496px;
+background: linear-gradient(to top, RGBA(185, 189, 253, 1), RGBA(16, 145, 243, 1), RGBA(183, 188, 253, 1));
+border-radius: 18px 18px 18px 18px;
+transition: 
+	width 2s,
+	border-radius 1.7s ;
+}
