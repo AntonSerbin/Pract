@@ -102,7 +102,7 @@ function CountdownTimer(arr){
 
   	//блок для управления временем 
 
-	lastPossitionButton.addEventListener("click",(event)=>
+	lastPossitionButton.addEventListener("click",( ттииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииии)=>
 		{event.preventDefault();
 		if (counterOfTasks<=1)  return	counterOfTasks=1;
 		counterOfTasks = counterOfTasks - 2;	
