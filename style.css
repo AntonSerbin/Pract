@@ -1,4 +1,9 @@
-body {background: silver}
+body {background: silver;}
+
+@font-face {
+    font-family: "MonotypeCorsiva"; 
+    src: url("MonotypeCorsiva.ttf"); 
+}
 
 .main {
 	display: flex;
@@ -16,8 +21,24 @@ img {
 	  border-radius: 10%;
 }
 
-img:hover{
+a:hover{
 	transform: scale(1.25);
 	transition-duration: 0.8s;
-
 }
+
+p {position: absolute;
+left: 50%;
+top: 30%;
+transform:translate(-50%,-50%);
+visibility: hidden;
+text-align: center;
+font-size: 2em;
+color:red;
+font-weight: 900;
+font-family: "MonotypeCorsiva";
+}
+
+a:hover p{
+	visibility:visible;
+}
+a:hover img{opacity: 0.2}

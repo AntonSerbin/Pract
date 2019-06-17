@@ -1,30 +1,151 @@
 *{margin: 0; padding: 0;
 font-family: 'helvetica neue', sans-serif;
-background: lightgrey;
+box-sizing:border-box;	
+background: black; 
+/*overflow-y: hidden; */
 }
- 	
+@font-face {
+    font-family: MonotypeCorsiva; 
+    src: url(MonotypeCorsiva.ttf); 
+}
+
+#icoRules{
+	animation-name: rulesAnimation;
+ 	animation-duration: 1s;
+ 	position: relative;
+
+}
+#icoRules:hover{ 	transform:scale(0.95);
+	box-shadow: 3px 1px 1px 0px red;
+	}
+
+@keyframes rulesAnimation {
+  0%   {right: 0px; top:0px;}
+  80%  {right:59px; top:20px;}
+/*  90%  {right: -10px; top:0px;}
+*/  100% {right:0px; top:0px;}
+}	
 
 main {
 	width: 100%;
-	border: 1px black dotted;
-               }
+      }
 
+header {
+	width: 100%;
+	height:20vh;
+	margin-bottom: 2em;
+	position: relative;
+	background: red;
+	display: inline-flex;
+	justify-content:space-between;
 
-main ul { 
+}
+
+header div {
+display: flex;
+    justify-content: center; /*Центрирование по горизонтали*/
+    align-items: center;     /*Центрирование по вертикали */
+    text-align: center;
+    line-height: 0.15;
+    background: red;
+}
+header p {
+display: block;
+font-size: 3em;
+color: white;
+line-height: 100%;
+background: red;
+font-family:'MonotypeCorsiva','Apple Chancery','ITC Zapf Chancery';
+user-select: none;
+}
+header a {
+	height: 100%;	
+	background: red;
+		}
+header img {
+	height: 100%; width: auto;
+}
+
+img {
+	border-radius: 15px;
+}
+
+.listOfTasks img{
+	width: 200px;
+	height: 200px;
+}
+
+.backTextList p{
+	text-align: center;
+	color:red;
+	padding-top: 40px;
+	font-size: 1.8em;
+	font-weight: 900;
+	font-family:'MonotypeCorsiva';
+}
+
+.listOfTasks{
+	width: 60%;
+	margin: 0 auto;
+}
+
+.listOfTasks ul { 
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  
-    grid-column-gap: 3em;
-  	grid-row-gap:3em	}
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  
+    grid-column-gap: 2em;
+  	grid-row-gap:1em	
+}
 	
-main li {
+.listOfTasks li {
 	list-style-type: none; 
 	position: relative;
-	margin:auto;
+	perspective: 1000;
+	width: 200px;
+	height: 200px;
 }
-main a {text-decoration: none;
-color: black}
-main a:visited {color: black; }
-main p {
-	text-align: center; 
-	font-size: 1em;
+
+.listOfTasks a {text-decoration: none;
 }
+
+.listOfTasks a:visited {color: black;
+}
+
+.flip-container {
+ perspective: 1000;
+}
+ /* переверните сторону при проведении мышью */
+ .flip-container:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateY(180deg);
+ }
+
+.flip-container, .front, .back {
+ width: 200px;
+ height: 200px;
+}
+
+/* здесь находится скорость перевертывания */
+.flipper {
+ transition: 0.7s;
+ transform-style: preserve-3d;
+ position: relative;
+}
+
+/* скройте обратную сторону во время переворота */
+.front, .back {
+ backface-visibility: hidden;
+ position: absolute;
+ top: 0;
+ left: 0;
+ user-select: none;
+
+}
+
+/* лицевая сторона размещена над обратной */
+.front {
+ z-index: 2;
+}
+
+/* обратная, изначально скрытая сторона */
+.back {
+ transform: rotateY(180deg);
+ }
