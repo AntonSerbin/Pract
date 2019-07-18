@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="..\engine\style_pic.css">
+    <!-- <link rel="stylesheet" href="..\engine\style_pic_individual.css"> -->
+
+</head>
+<body>
+
+  <header>
+    <img id = "headerLogo" src="../engine/logo_are_you_ready.png" height="100px" alt="logo">
+  </header>
+
+  <!-- Вылетающее окно с правилами и клавишей старт -->
+  <div id="rulesTotallWindow"> 
+      <div id="rulesWindow">
+               <h2>Local rules for this level.</h2>
+       <br>
+       <p>There will be 10 questions similar to the questions of the TV show "What? Where? When?".<br><br>
+        For each task you will be given 1 minute.<br>
+        Answers of players may not completely coincide with the answers of the tasks. If the player  wrote the logic of the question - the answer should be counted.<br>
+      <br>
+      To start the level, press START.<br>
+        <button id="#buttonCloseRules" class="buttonMenuRules"> START </button>
+        <button id="buttonAnswersHidden" class="buttonMenuAnswers"> ANSWERS </button>
+        <br>
+        <button class="buttonMenuRules" onclick="history.back()">Return to the main menu</button>
+        </div>
+    </div>
+    <!-- Окончание окна с правилами и клавишей старт -->
+<!-- Начало окна с уровнями -->
+<div class="parrent">
+  <div class="numberOfTask">
+    <p id="numberOfTaskP">Номер уровня: <span id="currentNumberTaskField"></span></p>
+  </div>
+  <div class="timerTable">00:00
+  </div>
+  <div class="menuControl">
+    <div id="buttonBackTask"><img src="..\engine\last.png" alt=""></div>
+    <div id="buttonPause"><img id="buttonPauseImage" src="..\engine\pause-button.png" alt=""></div>
+    <div id="buttonForwardTask"><img src="..\engine\next..png" alt=""></div>
+  </div>
+</div>
+<!-- Окончание окна с уровнями -->
+
+<!-- Окно с последний уровень с кнопками выхода в меню-->
+  <div id="finalTotalWindow"> 
+      <div id="finalWindow">
+       <h2 id="textFinalWindow">Collect answer forms and submit them for review.</h2>
+       <button id="buttonAnswers" class="buttonMenuAnswers"> ANSWERS </button>
+      <br>
+      <button class="buttonMenuAnswers" onclick="history.back()">Return to the main menu</button>
+       </div>
+    </div>
+    <!-- Окончание окна с правилами и клавишей старт -->
+
+<script src="task.js"></script>
+<script src="../engine/main_pict.js"></script>
+
+</body>
+</html>
+
+

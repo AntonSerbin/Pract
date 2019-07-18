@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="..\engine\style_pic.css">
+    <!-- <link rel="stylesheet" href="..\engine\style_pic_individual.css"> -->
+
+</head>
+<body>
+
+  <header>
+    <img id = "headerLogo" src="../engine/logo_are_you_ready.png" height="100px" alt="logo">
+  </header>
+
+  <!-- Вылетающее окно с правилами и клавишей старт -->
+  <div id="rulesTotallWindow"> 
+      <div id="rulesWindow">
+               <h2>Local rules for this level.</h2>
+       <br>
+        <p> We all know what Google is and what its standard logo looks like.</p>
+       <img src="03_logo.jpg" alt="google" style="margin:0">
+       <p> And Doodle is a special, temporary alteration of the logo on Google's homepages intended to invents or people. </p>
+       <p> On this level you'll have Doodle intended to Counties.
+        Your task is to determine the COUNTRY and write its in a form.<br>
+        For each picture will be given 30 seconds.<br>
+        Format of answer: COUNTRY.<br>
+      </p>
+        <button id="#buttonCloseRules" class="buttonMenuRules"> START </button>
+        <button id="buttonAnswersHidden" class="buttonMenuAnswers"> ANSWERS </button>
+        <br>
+        <button class="buttonMenuRules" onclick="history.back()">Return to the main menu</button>
+        </div>
+    </div>
+    <!-- Окончание окна с правилами и клавишей старт -->
+<!-- Начало окна с уровнями -->
+<div class="parrent">
+  <div class="numberOfTask">
+    <p id="numberOfTaskP">Number of the task:  <span id="currentNumberTaskField"></span></p>
+  </div>
+  <div class="timerTable">00:00
+  </div>
+  <div class="menuControl">
+    <div id="buttonBackTask"><img src="..\engine\last.png" alt=""></div>
+    <div id="buttonPause"><img id="buttonPauseImage" src="..\engine\pause-button.png" alt=""></div>
+    <div id="buttonForwardTask"><img src="..\engine\next..png" alt=""></div>
+  </div>
+</div>
+<!-- Окончание окна с уровнями -->
+
+<!-- Окно с последний уровень с кнопками выхода в меню-->
+  <div id="finalTotalWindow"> 
+      <div id="finalWindow">
+       <h2 id="textFinalWindow">Collect answer forms and submit them for review.</h2>
+       <button id="buttonAnswers" class="buttonMenuAnswers"> ANSWERS </button>
+      <br>
+      <button class="buttonMenuAnswers" onclick="history.back()">Return to the main menu</button>
+       </div>
+    </div>
+    <!-- Окончание окна с правилами и клавишей старт -->
+
+<script src="task.js"></script>
+<script src="../engine/main_pict.js"></script>
+
+</body>
+</html>
+
+
