@@ -181,26 +181,34 @@ if ((loadLocalData()==undefined)||(loadLocalData().taskName!=true)) {
 }
 
 
+
+
 //меню управления 
-buttonPause.addEventListener("click",()=>{
-	  	if (!pauseCounter) {
-	  		buttonPauseImage.style.border = "thick solid black";
-	  		buttonPauseImage.style.borderRadius = "50%";
-			}
-	  		else buttonPauseImage.style.border = "none";
-	    		return pauseCounter=!pauseCounter;
-		});
-	
-	buttonBackTask.addEventListener("click",()=>{
+
+function setPause(){
+	  	if (!pauseCounter) buttonPauseImage.src = "../engine/play-button.png";
+	  		else buttonPauseImage.src = "../engine/pause-button.png";
+	    return pauseCounter=!pauseCounter;	
+};
+//делаем паузу по клику
+buttonPause.addEventListener("click",setPause);
+//делаем паузу по пробелу
+document.addEventListener("keydown", (e)=>{if(e.keyCode == 32) setPause()}, false);
+
+
+function returnTaskButton(){
 	  	if (currentTask!=0) {
 		  	endTime=true;
+		  	if (typeof tasks[currentTask-1].secTask != "number") sec= tasks[0].secTask
+	  			else sec=tasks[currentTask-1].secTask;
 	  		currentTask--; 
 	  		currentTask--; 
-	  		if (tasks[currentTask].secTask == undefined) sec= tasks[0].secTask
-	  			else sec=tasks[currentTask].secTask;
-		}
-	});
+		};
+};		
+buttonBackTask.addEventListener("click",returnTaskButton);
 
-	buttonForwardTask.addEventListener("click",()=>{
-	  	if (currentTask!=tasks.length+1) sec=0;
-	 });
+function forwardTaskButton(){
+	if (currentTask!=tasks.length+1) sec=0;}
+
+buttonForwardTask.addEventListener("click", forwardTaskButton);
+

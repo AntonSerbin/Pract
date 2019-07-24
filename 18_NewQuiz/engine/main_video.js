@@ -193,30 +193,37 @@ if ((loadLocalData()==undefined)||(loadLocalData().taskName!=true)) {
 	buttonAnswersHidden.style.display = "none";
 }
 //меню управления 
-buttonPause.addEventListener("click",()=>{
+
+
+function setPause(){
 	  	if (!pauseCounter) {
-	  		buttonPauseImage.style.border = "thick solid black";
-	  		buttonPauseImage.style.borderRadius = "50%";
+	  		buttonPauseImage.src = "../engine/play-button.png";
 	  		video.pause();	
-			}
-	  		else {buttonPauseImage.style.border = "none";
-	  			  		video.play();	
-	  			  	};
-	    		return pauseCounter=!pauseCounter;
-		});
-	
-	
-		buttonBackTask.addEventListener("click",()=>{
+	  	}
+  		else {
+  			buttonPauseImage.src = "../engine/pause-button.png";
+  			video.play();	
+  		};
+	    return pauseCounter=!pauseCounter;	
+};
+//делаем паузу по клику
+buttonPause.addEventListener("click",setPause);
+//делаем паузу по пробелу
+document.addEventListener("keydown", (e)=>{if(e.keyCode == 32) setPause()}, false);
+		
+function returnTaskButton(){
 	  	if (currentTask!=0&&backButtonPressed==false&&endTime==false) {
 		  	endTime=true;
 	  		currentTask--; 
 	  		currentTask--; 		
 		};
-	});
+}
 
-	buttonForwardTask.addEventListener("click",()=>{
-	  	if (currentTask!=tasks.length+1&&sec!=0) sec=0;
-	 });
+function forwardTaskButton(){
+	if (currentTask!=tasks.length+1&&sec!=0) sec=0;
+}
+	buttonBackTask.addEventListener("click",returnTaskButton);
+	buttonForwardTask.addEventListener("click",forwardTaskButton);
 
 
 // подключаем видео
@@ -230,7 +237,7 @@ function setVideo(link) {
  x.setAttribute("autoplay", true);
  x.controls = false;
 
- if (parrent.querySelector("video"))  parrent.querySelector("video").remove();
+ if (parrent.querySelector("video")) parrent.querySelector("video").remove();
  parrent.appendChild(x);
  return x;
  // } ;

@@ -11,8 +11,7 @@ let plus15URL = `https://cdn.linuxaria.com/wp-content/uploads/2011/04/a_day_in_t
 let hotURL = `https://ak5.picdn.net/shutterstock/videos/9336905/thumb/1.jpg`;
 
 let container = document.querySelector(".container");
-const APIKEY = `id=Default&APPID=cf11416338f311c559cf08a6b87bf4c6
-`;
+const APIKEY = `id=Default&APPID=cf11416338f311c559cf08a6b87bf4c6`;
 let tempCurrent;
 
 

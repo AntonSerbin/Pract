@@ -1,50 +1,50 @@
 //задания на уровень
-let taskName = "quiz35";
+let taskName = "quiz36";
 const pauseAfterTask = 20; //sec пауза после уровня на подумать
 const tasks = [
  	task1 = {task:``,
-			secTask:20,
+			secTask:60,
 			pict:"./images/01.jpg",
 			// audio:"./images/01.mp3",
-			secAnswer:10,
+			secAnswer:15,
 //			formatAnswer:"",
-			answer:"Халк (мир Марвелл)",
+			answer:"Лазанья",
 			},
  	task2 = {task:``,
 			pict:"./images/02.jpg",
-			answer:"Джасмин(мультфильм Алладин)",
+			answer:"Хинкали",
 			}
 			,
  	task3 = {task:``,
 			pict:"./images/03.jpg",
-			answer:"Человек Паук/Питер Парткер (Мир Марвелл)",
+			answer:"Маргарита (в честь неё повар назвал пиццу)",
 			},
  	task4 = {task:``,
 			pict:"./images/04.jpg",
-			answer:"Иа (Винни-Пух)",
+			answer:"Паэлья",
 			},
  	task5 = {task:``,
 			pict:"./images/05.jpg",
-			answer:"Волли"
+			answer:"Эклер"
 			},
  	task6 = {task:``,
 			pict:"./images/06.jpg",
-			answer:"Беззубик (Как приручить дракона)",
+			answer:"Сэндвич",
 			},
  	task7 = {task:``,
 			pict:"./images/07.jpg",
-			answer:"Ниндзя-черепашки",
+			answer:"Завтрак, обед, ужин (парода собаки Бадуги)",
 			},
  	task8 = {task:``,
 			pict:"./images/08.jpg",
-			answer:"Ариэль (мультфильм Русалочка)",
+			answer:"В школах сумо (Высококалорийное блюдо для набора массы).",
 			},
  	task9 = {task:``,
 			pict:"./images/09.jpg",
-			answer:"Соник (м/ф,комикс,фильм Ёж Соник)",
+			answer:"Игра Перстолов",
 			},
  	task10 = {task:``,
 			pict:"./images/10.jpg",
-			answer:"Капитан Америка (мир Марвелл)"
+			answer:"Гамбургер, картошка фри, другая еда МакДональдза"
 			}
 ]			

@@ -74,31 +74,6 @@ function startAnswers(){
 }
 
 
-//меню управления 
-	buttonPause.addEventListener("click",()=>{
-	  	if (!pauseCounter) {
-	  		buttonPauseImage.style.border = "thick solid red";
-	  		buttonPauseImage.style.borderRadius = "50%";
-			}
-	  		else buttonPauseImage.style.border = "none";
-	    		return pauseCounter=!pauseCounter;
-		});
-	buttonBackTask.addEventListener("click",()=>{
-	  	console.log("buttonBackTask", currentTask, sec);
-	  	if (currentTask!=0) {
-		  	endTime=true;
-	  		currentTask--; 
-	  		currentTask--; 
-	  		if (tasks[currentTask].secTask == undefined) sec= tasks[0].secTask
-	  			else sec=tasks[currentTask].secTask;
-		}
-	});
-
-	buttonForwardTask.addEventListener("click",()=>{
-	  	console.log("buttonForwardTask", currentTask,`  ${tasks.length}`);
-	  	if (currentTask!=tasks.length+1) sec=0;
-	 });
-
 
 function minusSecond(taskOrAnswer){
 		startTimer= true;
@@ -194,3 +169,31 @@ if ((loadLocalData()==undefined)||(loadLocalData().taskName!=true)) {
 	buttonAnswersHidden.style.display = "none";
 
 }
+
+
+
+//меню управления 
+function setPause(){
+	  if (!pauseCounter) buttonPauseImage.src = "../engine/play-button.png";
+  		else buttonPauseImage.src = "../engine/pause-button.png";
+	return pauseCounter=!pauseCounter;
+};
+function returnTaskButton(){
+	  	if (currentTask!=0&&pauseCounter==false) {
+
+	  		console.log('tasks[currentTask]',tasks[currentTask]);
+	  		if (typeof tasks[currentTask].secTask != "number") sec= tasks[0].secTask
+	  			else sec=tasks[currentTask].secTask;
+	  				  	endTime=true;
+	  		currentTask--; 
+	  		currentTask--; 
+		}
+};
+function forwardTaskButton(){
+	if (currentTask!=tasks.length+1&&pauseCounter==false) sec=0;
+};
+	buttonPause.addEventListener("click",setPause);
+	document.addEventListener("keydown", (e)=>{if(e.keyCode == 32) setPause()}, false);
+	buttonBackTask.addEventListener("click",returnTaskButton);
+	buttonForwardTask.addEventListener("click",forwardTaskButton);
+	
