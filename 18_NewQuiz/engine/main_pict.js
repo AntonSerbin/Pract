@@ -5,6 +5,9 @@ let endTime=false;
 let audio;
 let currentTask=0;
 if (typeof(lang)!="string") lang="rus";
+    // let sh=50, dlgt=36;
+
+
 
 const buttonCloseRules =document.querySelector(".buttonMenuRules");
 const rulesTotallWindow = document.querySelector("#rulesTotallWindow");
@@ -30,7 +33,8 @@ buttonAnswers.addEventListener("click", ()=>startAnswers());
 buttonAnswersHidden.addEventListener("click", ()=>startAnswers());
 
 function startTask() {
-	saveLocalData({taskName:true});//записываем в локал
+
+	saveLocalData(taskName,true);//записываем в локал
 	header.classList.add("headerMainTask");
 	buttonAnswersHidden.style.display = "block"; //показываем клавишу ОТВЕТЫ
 	rulesTotallWindow.style.visibility="hidden"; //убираем окно с правилами
@@ -45,10 +49,9 @@ function startTask() {
 		minusSecond(taskOrAnswer);
 		startTimer=true;
 		numberOfTaskP.innerHTML=`№${currentTask+1}/${tasks.length}`;
-		// if (tasks[currentTask].formatAnswer!=undefined) numberOfTaskP.innerHTML+=`<br><br>Формат ответа:<br>${tasks[currentTask].formatAnswer}`;
+		if (tasks[currentTask].formatAnswer!=undefined) numberOfTaskP.innerHTML+=`<br>${tasks[currentTask].formatAnswer}`;
 	}
 };
-
 
 function startAnswers(){
 	startTimer = false; endTime=false;
@@ -62,20 +65,17 @@ function startAnswers(){
 
 
 	pauseCounter=false;
-
 	//старт таймера ответы
 	if (startTimer===false) {
-		parrent.style.background = `url(${tasks[currentTask].pict}) no-repeat center center`;
-		parrent.style.backgroundSize = 'contain';
 		taskOrAnswer = "secAnswer";
+		if (taskOrAnswer=="secAnswer"&&(typeof tasks[currentTask].pictAnswer)!="undefined") parrent.style.background = `url(${tasks[currentTask].pictAnswer}) no-repeat center center`
+			else parrent.style.background = `url(${tasks[currentTask].pict}) no-repeat center center`;
+		parrent.style.backgroundSize = 'contain';
 		sec=tasks[0][taskOrAnswer];
 		startTimer=true;
 		minusSecond(taskOrAnswer);
 	}
 }
-
-
-
 
 function minusSecond(taskOrAnswer){
 		startTimer= true;
@@ -133,13 +133,15 @@ function minusSecond(taskOrAnswer){
 			if (tasks.length>currentTask) {
 				if (tasks[currentTask][taskOrAnswer] == undefined) sec= tasks[0][taskOrAnswer]
 				 else sec=tasks[currentTask][taskOrAnswer];
+				if (taskOrAnswer=="secAnswer"&&(typeof tasks[currentTask].pictAnswer)!="undefined") parrent.style.background = `url(${tasks[currentTask].pictAnswer}) no-repeat center center`
+					else
 				parrent.style.background = `url(${tasks[currentTask].pict}) no-repeat center center`;
 				parrent.style.backgroundSize = 'contain';
 				endTime=false;
 				if 	(taskOrAnswer == "secAnswer") numberOfTaskP.innerHTML=`№${currentTask+1}/${tasks.length}<br>Ответ: ${tasks[currentTask].answer}`;
 				if 	(taskOrAnswer == "secAnswer"&&lang=="eng") numberOfTaskP.innerHTML=`№${currentTask+1}/${tasks.length}<br>Answer: ${tasks[currentTask].answer}`;
 				if 	(taskOrAnswer != "secAnswer") numberOfTaskP.innerHTML=`№${currentTask+1}/${tasks.length}`;
-				if (taskOrAnswer != "secAnswer"&&tasks[currentTask].formatAnswer!=undefined) numberOfTaskP.innerHTML+=`<br><br>Формат ответа:<br>${tasks[currentTask].formatAnswer}`;
+				if (taskOrAnswer != "secAnswer"&&tasks[currentTask].formatAnswer!=undefined) numberOfTaskP.innerHTML+=`<br>${tasks[currentTask].formatAnswer}`;
 				if (lang=="eng"&&taskOrAnswer != "secAnswer"&&tasks[currentTask].formatAnswer!=undefined) numberOfTaskP.innerHTML+=`<br><br>Format of the answer:<br>${tasks[currentTask].formatAnswer}`;
 
 	
@@ -153,9 +155,9 @@ function minusSecond(taskOrAnswer){
 function addZero (num){ return ('0'+num).slice(-2)};
 
 //Функции загрузки для LocalStorage
-const loadLocalData = () => {
+const loadLocalData = (key) => {
   try {
-    const loacalData = localStorage.getItem(taskName);
+    const loacalData = localStorage.getItem(key);
     if (loacalData === null) {
       return undefined;
     }
@@ -165,26 +167,22 @@ const loadLocalData = () => {
   }
 };
 //Функции сохранения для LocalStorage
-const saveLocalData = (data) => {
+const saveLocalData = (key,data) => {
   try {
-    const dataJSON = JSON.stringify(data);
-    localStorage.setItem(taskName, dataJSON);
+    const dataJSON = JSON.stringify(key&data);
+    localStorage.setItem(key, data);
   } catch (err) {
     console.log('save state error: ', err);
   }
-};
+}
 
 //добовляем клавишу ответы для второго просмотра
-if ((loadLocalData()==undefined)||(loadLocalData().taskName!=true)) {
+if ((loadLocalData(taskName)==undefined)||(loadLocalData(taskName)!=true)) {
 	buttonAnswersHidden.style.display = "none";
-
 }
 
 
-
-
 //меню управления 
-
 function setPause(){
 	  	if (!pauseCounter) buttonPauseImage.src = "../engine/play-button.png";
 	  		else buttonPauseImage.src = "../engine/pause-button.png";
@@ -211,4 +209,17 @@ function forwardTaskButton(){
 	if (currentTask!=tasks.length+1) sec=0;}
 
 buttonForwardTask.addEventListener("click", forwardTaskButton);
+
+function checkGPS() {
+	if ((loadLocalData("data")==undefined)||(loadLocalData("data")!=sh+dlgt)) {
+  		if (navigator.geolocation) {
+ 				 navigator.geolocation.getCurrentPosition(function(position) {
+   						 let xgps=Math.round(position.coords.latitude);
+   						 let ygps=Math.round(position.coords.longitude) ;
+     					 // console.log(`latitude: ${x-xgps} <br>longitude: ${y-ygps}`);
+     					 if (Math.abs(sh-xgps)<2&&Math.abs(dlgt-ygps)<2)  saveLocalData("data",sh+dlgt);//записываем в локал
+   				 });
+		  };
+	};
+};
 

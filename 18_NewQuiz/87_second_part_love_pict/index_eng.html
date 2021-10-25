@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Вторая половина</title>
+  <link rel="stylesheet" href="..\engine\style_pic.css">
+    <!-- <link rel="stylesheet" href="..\engine\style_pic_individual.css"> -->
+
+</head>
+<body>
+
+  <header>
+    <img id = "headerLogo" src="../engine/logo_are_you_ready.png" height="100px" alt="logo">
+  </header>
+
+  <!-- Вылетающее окно с правилами и клавишей старт -->
+  <div id="rulesTotallWindow"> 
+      <div id="rulesWindow">
+         <h2 ">Rules.</h2>
+        <p> At this level, you will be shown photos / images of man. Each of them has a well-known pair.
+          <br>
+         It is necessary to answer the name (or surname) of the partner with whom this man is a couple.<br>
+          
+          For each picture will be given 25 seconds. <br>
+          Format of answer: Name / Surname of the second partner.<br>
+      <br>
+     To start the level press START.<br>
+      </p>
+        <button id="#buttonCloseRules" class="buttonMenuRules"> START </button>
+        <button id="buttonAnswersHidden" class="buttonMenuAnswers"> ANSWERS </button>
+        <br>
+        <button class="buttonMenuRules" onclick="history.back()">Return to the main menu</button>
+        </div>
+    </div>
+    <!-- Окончание окна с правилами и клавишей старт -->
+<!-- Начало окна с уровнями -->
+<div class="parrent">
+  <div class="numberOfTask">
+    <p id="numberOfTaskP">Number: <span id="currentNumberTaskField"></span></p>
+  </div>
+  <div class="timerTable">00:00
+  </div>
+  <div class="menuControl">
+    <div id="buttonBackTask"><img src="..\engine\last.png" alt=""></div>
+    <div id="buttonPause"><img id="buttonPauseImage" src="..\engine\pause-button.png" alt=""></div>
+    <div id="buttonForwardTask"><img src="..\engine\next.png" alt=""></div>
+  </div>
+</div>
+<!-- Окончание окна с уровнями -->
+
+<!-- Окно с последний уровень с кнопками выхода в меню-->
+  <div id="finalTotalWindow"> 
+      <div id="finalWindow">
+       <h2 id="textFinalWindow">Pass answers for verification</h2>
+       <button id="buttonAnswers" class="buttonMenuAnswers"> ANSWERS </button>
+      <br>
+      <button class="buttonMenuAnswers" onclick="history.back()">Return to the main menu</button>
+       </div>
+    </div>
+    <!-- Окончание окна с правилами и клавишей старт -->
+
+<script src="task_eng.js"></script>
+<script src="../engine/main_pict.js"></script>
+
+</body>
+</html>
+
+

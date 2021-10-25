@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Charachters</title>
+  <link rel="stylesheet" href="..\engine\style_pic.css">
+    <!-- <link rel="stylesheet" href="..\engine\style_pic_individual.css"> -->
+
+</head>
+<body>
+
+  <header>
+    <img id = "headerLogo" src="../engine/logo_are_you_ready.png" height="80px" alt="logo">
+  </header>
+<style>
+#headerLogo {opacity: 0.75; transform: scale(0.95);}
+.menuControl {opacity:0.1}
+.menuControl:hover {opacity:0.9}
+
+</style>
+  <!-- Вылетающее окно с правилами и клавишей старт -->
+  <div id="rulesTotallWindow"> 
+      <div id="rulesWindow">
+         <h2>Rules.</h2>
+         <br>
+		<p> Cult literary characters looked different within generations.
+         At this level, you will be shown characters from films of various years. <br>
+           It is necessary to name the character. Characters are not repeated.
+           <br>
+           <br> Answer format: Character. <br>
+           For each correct name 1 point.
+       <br>
+       To start the level press START. <br> 
+      </p>
+        <button id="#buttonCloseRules" class="buttonMenuRules"> START </button>
+        <button id="buttonAnswersHidden" class="buttonMenuAnswers"> ANSWERS </button>
+        <br>
+        <button class="buttonMenuRules" onclick="history.back()">Return to main menu</button>
+        </div>
+    </div>
+    <!-- Окончание окна с правилами и клавишей старт -->
+<!-- Начало окна с уровнями -->
+<div class="parrent">
+  <div class="numberOfTask">
+    <p id="numberOfTaskP">Level number: <span id="currentNumberTaskField"></span></p>
+  </div>
+  <div class="timerTable">00:00
+  </div>
+  <div class="menuControl">
+    <div id="buttonBackTask"><img src="..\engine\last.png" alt=""></div>
+    <div id="buttonPause"><img id="buttonPauseImage" src="..\engine\pause-button.png" alt=""></div>
+    <div id="buttonForwardTask"><img src="..\engine\next.png" alt=""></div>
+  </div>
+</div>
+<!-- Окончание окна с уровнями -->
+
+<!-- Окно с последний уровень с кнопками выхода в меню-->
+  <div id="finalTotalWindow"> 
+      <div id="finalWindow">
+       <h2 id="textFinalWindow">Pass answer forms and submit them for review </h2>
+       <button id="buttonAnswers" class="buttonMenuAnswers"> ANSWERS </button>
+      <br>
+      <button class="buttonMenuAnswers" onclick="history.back()">Return to main menu </button>
+       </div>
+    </div>
+    <!-- Окончание окна с правилами и клавишей старт -->
+
+<script src="task_eng.js"></script>
+<script src="../engine/main_pict.js"></script>
+
+</body>
+</html>
+
+

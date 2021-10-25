@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Стихи-пробелы</title>
+  <link rel="stylesheet" href="..\engine\style_pic.css">
+    <!-- <link rel="stylesheet" href="..\engine\style_pic_individual.css"> -->
+
+</head>
+<body>
+
+  <header>
+    <img id = "headerLogo" src="../engine/logo_are_you_ready.png" height="100px" alt="logo">
+  </header>
+
+  <!-- Вылетающее окно с правилами и клавишей старт -->
+  <div id="rulesTotallWindow"> 
+      <div id="rulesWindow">
+         <h2>Правила уровня.</h2>
+         <br>
+        <p> На данном уровне Вам будут представлены стихи с пропущенным одним или несколькими словами. Вам надо заполнить пропуски. <br>
+        	У всех стихов единая ритмика:<br>
+        	9-8-9-2 слогов в каждой строчке. <br>
+        <br>
+        Всего 8 заданий.<br>
+        За каждый правильный ответ начисляется 1 бал.<br>
+        Ищите авторский вариант, засчитываются только слова приведенные в ответе, альтернативные логики не засчитываются.<br>
+        Формат ответа: Слово(слова) на русском языке.<br>
+      <br>
+      </p>
+        <button id="#buttonCloseRules" class="buttonMenuRules"> СТАРТ </button>
+        <button id="buttonAnswersHidden" class="buttonMenuAnswers"> ОТВЕТЫ </button>
+        <br>
+        <button class="buttonMenuRules" onclick="history.back()">Вернуться в главное меню</button>
+        </div>
+    </div>
+    <!-- Окончание окна с правилами и клавишей старт -->
+<!-- Начало окна с уровнями -->
+<div class="parrent">
+  <div class="numberOfTask">
+    <p id="numberOfTaskP">Номер уровня: <span id="currentNumberTaskField"></span></p>
+  </div>
+  <div class="timerTable">00:00
+  </div>
+  <div class="menuControl">
+    <div id="buttonBackTask"><img src="..\engine\last.png" alt=""></div>
+    <div id="buttonPause"><img id="buttonPauseImage" src="..\engine\pause-button.png" alt=""></div>
+    <div id="buttonForwardTask"><img src="..\engine\next.png" alt=""></div>
+  </div>
+</div>
+<!-- Окончание окна с уровнями -->
+
+<!-- Окно с последний уровень с кнопками выхода в меню-->
+  <div id="finalTotalWindow"> 
+      <div id="finalWindow">
+       <h2 id="textFinalWindow">Соберите бланки с ответами и передайте их на проверку</h2>
+       <button id="buttonAnswers" class="buttonMenuAnswers"> ОТВЕТЫ </button>
+      <br>
+      <button class="buttonMenuAnswers" onclick="history.back()">Вернуться в главное меню</button>
+      
+       </div>
+    </div>
+    <!-- Окончание окна с правилами и клавишей старт -->
+
+<script src="task.js"></script>
+<script src="../engine/main_pict.js"></script>
+
+</body>
+</html>
+
+

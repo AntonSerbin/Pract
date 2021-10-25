@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Цвета флага</title>
+  <link rel="stylesheet" href="..\engine\style_pic.css">
+
+</head>
+	<style>
+	#rulesWindow p {font-size: 0.7em !important};
+	</style>
+<body>
+
+  <header>
+    <img id = "headerLogo" src="../engine/logo_are_you_ready.png" height="100px" alt="logo">
+  </header>
+
+  <!-- Вылетающее окно с правилами и клавишей старт -->
+  <div id="rulesTotallWindow"> 
+      <div id="rulesWindow" >
+         <h2>Правила уровня.</h2>
+         <p> На данном уровне Вам будут показаны изображения, которые ассоциируются со странами. <br>
+        	Вам не нужно назвать страну, Вам нужно выбрать какой из четырех цветов <span style="font-weight: 600">(А) Красный (Б)Желтый (В)Синий или (Г)Зеленый </span>есть на флаге этой страны. Варианты цветов не меняются в заданиях и будут продублированы на каждой картинке.<br>
+        	Нужно указать ТОЛЬКО ОДИН любой из правильных цветов который есть на флаге. Если будет указано в бланке 2 цвета и один из них будет нерпавильный - ответ не засчитывается.<br>
+        	<span style="font-weight: 900;">Пример:</span></p>
+        <div style="display: inline-flex; width:80%; justify-content:space-around	; align-items:center">
+        	<img style=" border-radius: 0" src="sample.jpg" width="25%" alt="">
+			<p style="text-align: center;">Определяем, что на рисунке "чешки", т.е. страна - Чехия. Флаг Чехии:</p>
+			
+		</div>
+		<div style="display: inline-flex; width:80%; justify-content: space-around	;align-items:center">
+			<img  src="sample_flag.png" style="border:black solid 1px; border-radius: 0" width="15%" alt="">
+			<p style="text-align: center;">Во флаге пристутствуют Красный и Синий цвета. Можно написать в бланк ответ:<br> А или В.</p>
+		</div>
+      <p>
+<!--       Что б начать уровень нажмите СТАРТ.<br>
+ -->      </p>
+        <button id="#buttonCloseRules" class="buttonMenuRules"> СТАРТ </button>
+        <button id="buttonAnswersHidden" class="buttonMenuAnswers"> ОТВЕТЫ </button>
+        <br>
+        <button class="buttonMenuRules" onclick="history.back()">Вернуться в главное меню</button>
+        </div>
+    </div>
+    <!-- Окончание окна с правилами и клавишей старт -->
+<!-- Начало окна с уровнями -->
+<div class="parrent">
+  <div class="numberOfTask">
+    <p id="numberOfTaskP">Номер уровня: <span id="currentNumberTaskField"></span></p>
+  </div>
+  <div class="timerTable">00:00
+  </div>
+  <div class="menuControl">
+    <div id="buttonBackTask"><img src="..\engine\last.png" alt=""></div>
+    <div id="buttonPause"><img id="buttonPauseImage" src="..\engine\pause-button.png" alt=""></div>
+    <div id="buttonForwardTask"><img src="..\engine\next.png" alt=""></div>
+  </div>
+</div>
+<!-- Окончание окна с уровнями -->
+
+<!-- Окно с последний уровень с кнопками выхода в меню-->
+  <div id="finalTotalWindow"> 
+      <div id="finalWindow">
+       <h2 id="textFinalWindow">Соберите бланки с ответами и передайте их на проверку</h2>
+       <button id="buttonAnswers" class="buttonMenuAnswers"> ОТВЕТЫ </button>
+      <br>
+      <button class="buttonMenuAnswers" onclick="history.back()">Вернуться в главное меню</button>
+       </div>
+    </div>
+    <!-- Окончание окна с правилами и клавишей старт -->
+
+<script src="task.js"></script>
+<script src="../engine/main_pict.js"></script>
+
+</body>
+</html>
+
+

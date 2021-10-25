@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Happy2021</title>
+	<link rel="stylesheet" href="engine/main_style.css">
+
+</head>
+<body>
+
+<main>
+	<header>
+		<img id="logo" src="engine/quiz_agency_logo.png" alt="logo"  onclick="">
+		<div>
+		<p >КВИЗ, который всегда с тобой.</p>
+		</div>
+		<a id="icoRules" href="00_rules/00.html"><img  src="00_rules/00_.jpg" alt="Rules"></a>
+	</header>
+
+   <div class="listOfTasks"> <!-- основной блок -->
+         <ul> </ul> <!-- блок для задний -->
+         <div id="updown"></div> <!-- кнопка наверх -->
+   </div>
+
+</main>
+				<div id="preloadindVideo" style="height: 20px;text-align:right"></div> 	<!--Блок видело для препрогрузки -->
+
+</body>
+<script src="engine/main.js"></script>
+
+<script>
+// preLoadVideos (2,"133_ukr_songs2021_video");
+
+newTask("107_films2020_pic", "Фильмы 2020 года");
+newTask("106_remix_in_rus_video", "Ремиксы на русском яз");
+newTask("118_chenuha_chgk_pic", "ЧГК чернуха1");
+newTask("123_charakters_years_pic", "Киногерои в разные годы");
+newTask("133_ukr_songs2021_video", "Песни на украинском");
+newTask("131_anagram_pic", "Анаграммы 2 слова");
+newTask("125_human_like_cartoon_pic", "Мультперсонаж в жизни");
+newTask("129_pict_blanked_words_pica", "Самопал");
+newTask("108_mix_shorts4", "Микс двух фильмов4");
+newTask("109_chernuha_hard_possitions_pic", "Чернуха позы ");
+
+preLoadVideos (2,"133_ukr_songs2021_video");
+preLoadVideos (2,"106_remix_in_rus_video");
+preLoadVideos (2,"108_mix_shorts4");
+
+</script>
+
+</html>

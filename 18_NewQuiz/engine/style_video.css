@@ -24,9 +24,9 @@ header {
 header img {
   position: absolute;
   margin:auto;
-  height: 80px;
-  left:50%;
-  transform: translateX(-50%);
+  height: 100px;
+  left:0%;
+  /*transform: translateX(-50%);*/
   z-index: 5;
 
 }
@@ -36,13 +36,12 @@ header img {
 .headerMainTask img{
     left:0;
    transform: translateX(0);
-   width: 250px;
+   width: 100px;
    height: auto;
-
 }
 
 #headerLogo:hover{
-filter: invert(100%);
+filter: invert(20%);
 cursor: pointer;
 }
 

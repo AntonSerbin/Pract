@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Страны слова</title>
+  <link rel="stylesheet" href="..\engine\style_pic.css">
+    <!-- <link rel="stylesheet" href=".\style_pic_individual.css"> -->
+
+</head>
+<body>
+
+  <header>
+    <img id = "headerLogo" src="../engine/logo_are_you_ready.png" height="100px" alt="logo">
+  </header>
+<style>
+	#rulesWindow h2 {font-size: 1.0em}
+	#rulesWindow p { font-size: 0.8em}
+	#rulesTotallWindow {top: 25%;}
+	body{overflow-y: hidden; }
+
+
+</style>
+  <!-- Вылетающее окно с правилами и клавишей старт -->
+  <div id="rulesTotallWindow"> 
+      <div id="rulesWindow">
+         <h2>Правила уровня.</h2>
+         <br>
+        <p> На данном уровне Вам будут загаданы страны. Всего загадано 10 стран, все эти страны будут Вам даны(отображены на каждом уровне внизу экрана). Необходимо будет раставить страны в правильном порядке. 
+        <br>
+        На каждом задании будет картинка, и нужно выбрать, какая страна подходит к показанному рисунку. Например: на картинке показана <b>Капуста</b>, а в вариантах ответа есть <b>Бельгия</b>, надо соотнести правильную логику - "<b>Брюсельская капуста</b>" и вписать в ответ слово <b>Бельгия</b>.<br>
+        <img src="sprouts.jpg" width="140" alt="">
+        <br>
+        Всего 10 заданий и 10 стран (по одной стране на задание).<br>
+        За каждый правильный ответ начисляется 1 бал.<br>
+        Формат ответа: Название страны.<br>
+      <br>
+      </p>
+        <button id="#buttonCloseRules" class="buttonMenuRules"> СТАРТ </button>
+        <button id="buttonAnswersHidden" class="buttonMenuAnswers"> ОТВЕТЫ </button>
+        <br>
+        <button class="buttonMenuRules" onclick="history.back()">Вернуться в главное меню</button>
+        </div>
+    </div>
+    <!-- Окончание окна с правилами и клавишей старт -->
+<!-- Начало окна с уровнями -->
+<div class="parrent">
+  <div class="numberOfTask">
+    <p id="numberOfTaskP">Номер уровня: <span id="currentNumberTaskField"></span></p>
+  </div>
+  <div class="timerTable">00:00
+  </div>
+  <div class="menuControl">
+    <div id="buttonBackTask"><img src="..\engine\last.png" alt=""></div>
+    <div id="buttonPause"><img id="buttonPauseImage" src="..\engine\pause-button.png" alt=""></div>
+    <div id="buttonForwardTask"><img src="..\engine\next.png" alt=""></div>
+  </div>
+</div>
+<!-- Окончание окна с уровнями -->
+
+<!-- Окно с последний уровень с кнопками выхода в меню-->
+  <div id="finalTotalWindow"> 
+      <div id="finalWindow">
+       <h2 id="textFinalWindow">Соберите бланки с ответами и передайте их на проверку</h2>
+
+        <img style="display:block; margin:auto;" src="./images/all.jpg" width="70%" alt="">
+       <button id="buttonAnswers" class="buttonMenuAnswers"> ОТВЕТЫ </button>
+      <button class="buttonMenuAnswers" onclick="history.back()">Вернуться в главное меню</button>
+      
+       </div>
+    </div>
+    <!-- Окончание окна с правилами и клавишей старт -->
+
+<script src="task.js"></script>
+<script src="../engine/main_pict.js"></script>
+
+</body>
+</html>
+
+
